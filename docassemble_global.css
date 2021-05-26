@@ -1,4 +1,4 @@
-@import 'fonts.css';
+@import 'https://s3-us-west-1.amazonaws.com/hsldocassemble/assets/fonts.css';
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .icon-close {
   background-image: url("https://s3-us-west-1.amazonaws.com/hsldocassemble/assets/close-button.png");
