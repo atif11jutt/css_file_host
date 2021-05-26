@@ -416,14 +416,13 @@ blockquote.blockquote {
 
 /*# sourceMappingURL=docassemble_global.css.map */
 
-
 .signupFooterText {
-  display: none !important;
+    display: none !important;
 }
 
 .forgotPasswordLinkContainer {
-  margin-top: 20px;
+    margin-top: 20px;
 }
-.signupFormContainer{
-  width: 100%;
+.signupFormContainer, .signinFormContainer{
+    width: 100%;
 }
