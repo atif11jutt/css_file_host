@@ -1,0 +1,429 @@
+@import 'fonts.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.icon-close {
+  background-image: url("https://s3-us-west-1.amazonaws.com/hsldocassemble/assets/close-button.png");
+  background-size: 100%;
+}
+
+body {
+  font-family: "Avenir";
+}
+
+body {
+  visibility: hidden;
+}
+body .navbar.navbar-dark.fixed-top {
+  display: none;
+}
+body.pad-for-navbar {
+  padding-top: 0;
+}
+
+body.dasignature a.btn-primary {
+  background: #3EC891;
+  border: none;
+  font-size: 16px;
+}
+body.dasignature a.btn-warning {
+  background: #333;
+  border: none;
+  font-size: 16px;
+}
+body.dasignature #errormess {
+  color: #3EC891;
+}
+
+body.adminbody {
+  background-color: #F8FAFC;
+  overflow-x: hidden;
+}
+
+body.usersign-in #hslNav .logo, body.userforgot-password #hslNav .logo, body.userregister #hslNav .logo {
+  background-position: center 0;
+}
+
+body.playground #main > .row:last-child, body.playground #damain > .row:last-child {
+  display: none;
+}
+body.playground #main > .row:first-child .col-sm-4.col-md-4.col-lg-4, body.playground #damain > .row:first-child .col-sm-4.col-md-4.col-lg-4 {
+  display: none;
+}
+
+#hslNav {
+  border-bottom: 1px solid lightgray;
+  position: relative;
+  z-index: 10;
+  background: white;
+}
+#hslNav .hslNavContainer {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0 20px;
+}
+#hslNav .logoContainer {
+  display: block;
+  max-width: 400px;
+}
+#hslNav .hslNavLogoImage {
+  height: auto;
+  width: 100%;
+}
+#hslNav .logo {
+  background: url("https://s3-us-west-1.amazonaws.com/hsldocassemble/assets/hsl_logo.png") 0 0 no-repeat;
+  height: 40px;
+}
+#hslNav ul.links {
+  list-style-type: none;
+  display: flex;
+  align-self: flex-end;
+  margin: 0 20px 0;
+}
+#hslNav ul.links li {
+  margin-left: 30px;
+}
+#hslNav ul.links li a {
+  font-size: 16px;
+  color: gray;
+  text-decoration: none;
+}
+#hslNav ul.links .hslSubnav {
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  display: none;
+  background: white;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+#hslNav ul.links .hslSubnav li {
+  border: 1px solid #333;
+  margin: 0;
+  position: relative;
+}
+#hslNav ul.links .hslSubnav li:first-child {
+  border-bottom: none;
+}
+#hslNav ul.links .hslSubnav li.fullborder {
+  border-bottom: 1px solid #333;
+}
+#hslNav ul.links .hslSubnav li a {
+  padding: 10px 20px;
+  display: block;
+}
+#hslNav ul.links .subnavTrigger {
+  display: flex;
+}
+#hslNav ul.links .subnavTrigger svg {
+  margin-top: 2px;
+}
+
+.navUsernameContainer span, .navUsernameContainer a, .navUsernameContainer svg {
+  color: #3EC891;
+}
+
+body.usersign-in {
+  background: blue;
+}
+body.usersign-in .col .text-right {
+  display: none;
+}
+body.usersign-in .signinSubText {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+body.usersign-in .forgotPasswordLinkContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+body.usersign-in .forgotPasswordLinkContainer a {
+  color: #3EC891;
+  font-weight: bold;
+}
+body.usersign-in .createAccountLinkContainer {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #666;
+}
+body.usersign-in .createAccountLinkContainer a {
+  color: #3EC891;
+  font-weight: bold;
+}
+body.usersign-in .signinFormContainer .form-actions {
+  margin-top: 40px;
+}
+body.usersign-in .signinFormContainer .form-group:nth-of-type(3) {
+  display: none;
+}
+
+body.usersign-in, body.usersign-in #hslNav, body.userregister, body.userregister #hslNav, body.userforgot-password, body.userforgot-password #hslNav, body.userreset-password, body.userreset-password #hslNav {
+  background: #F8FAFC;
+}
+body.usersign-in #hslNav, body.userregister #hslNav, body.userforgot-password #hslNav, body.userreset-password #hslNav {
+  border: none;
+}
+body.usersign-in #hslNav ul.links, body.userregister #hslNav ul.links, body.userforgot-password #hslNav ul.links, body.userreset-password #hslNav ul.links {
+  display: none;
+}
+body.usersign-in #hslNav .logoContainer, body.userregister #hslNav .logoContainer, body.userforgot-password #hslNav .logoContainer, body.userreset-password #hslNav .logoContainer {
+  margin: 0 auto;
+}
+body.usersign-in #main label, body.usersign-in #damain label, body.userregister #main label, body.userregister #damain label, body.userforgot-password #main label, body.userforgot-password #damain label, body.userreset-password #main label, body.userreset-password #damain label {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+body.usersign-in #main label:after, body.usersign-in #damain label:after, body.userregister #main label:after, body.userregister #damain label:after, body.userforgot-password #main label:after, body.userforgot-password #damain label:after, body.userreset-password #main label:after, body.userreset-password #damain label:after {
+  content: "*";
+  color: red;
+  padding-left: 5px;
+}
+body.usersign-in #main div.checkbox > label, body.usersign-in #damain div.checkbox > label, body.userregister #main div.checkbox > label, body.userregister #damain div.checkbox > label, body.userforgot-password #main div.checkbox > label, body.userforgot-password #damain div.checkbox > label, body.userreset-password #main div.checkbox > label, body.userreset-password #damain div.checkbox > label {
+  margin-top: 10px;
+  text-transform: none;
+}
+body.usersign-in #main div.checkbox > label:after, body.usersign-in #damain div.checkbox > label:after, body.userregister #main div.checkbox > label:after, body.userregister #damain div.checkbox > label:after, body.userforgot-password #main div.checkbox > label:after, body.userforgot-password #damain div.checkbox > label:after, body.userreset-password #main div.checkbox > label:after, body.userreset-password #damain div.checkbox > label:after {
+  content: "";
+}
+body.usersign-in #main input, body.usersign-in #damain input, body.userregister #main input, body.userregister #damain input, body.userforgot-password #main input, body.userforgot-password #damain input, body.userreset-password #main input, body.userreset-password #damain input {
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid #E2E5EA;
+  border-radius: 0;
+}
+body.usersign-in #main button, body.usersign-in #damain button, body.userregister #main button, body.userregister #damain button, body.userforgot-password #main button, body.userforgot-password #damain button, body.userreset-password #main button, body.userreset-password #damain button {
+  border: none;
+  box-shadow: none;
+  margin: 0 auto;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  border-radius: 2px;
+  background: #46A6FF;
+  text-transform: capitalize;
+}
+body.usersign-in .resetPasswordFormContainer > h1, body.userregister .resetPasswordFormContainer > h1, body.userforgot-password .resetPasswordFormContainer > h1, body.userreset-password .resetPasswordFormContainer > h1 {
+  margin-bottom: 40px;
+}
+body.usersign-in .signinFormContainer, body.userregister .signinFormContainer, body.userforgot-password .signinFormContainer, body.userreset-password .signinFormContainer {
+  margin: 0 auto;
+}
+body.usersign-in .signupFormContainer, body.usersign-in .signinFormContainer, body.usersign-in .forgotPasswordFormContainer, body.usersign-in .resetPasswordFormContainer, body.userregister .signupFormContainer, body.userregister .signinFormContainer, body.userregister .forgotPasswordFormContainer, body.userregister .resetPasswordFormContainer, body.userforgot-password .signupFormContainer, body.userforgot-password .signinFormContainer, body.userforgot-password .forgotPasswordFormContainer, body.userforgot-password .resetPasswordFormContainer, body.userreset-password .signupFormContainer, body.userreset-password .signinFormContainer, body.userreset-password .forgotPasswordFormContainer, body.userreset-password .resetPasswordFormContainer {
+  padding: 20px 60px;
+}
+body.usersign-in .signupFormContainer > h1, body.usersign-in .signinFormContainer > h1, body.usersign-in .forgotPasswordFormContainer > h1, body.usersign-in .resetPasswordFormContainer > h1, body.userregister .signupFormContainer > h1, body.userregister .signinFormContainer > h1, body.userregister .forgotPasswordFormContainer > h1, body.userregister .resetPasswordFormContainer > h1, body.userforgot-password .signupFormContainer > h1, body.userforgot-password .signinFormContainer > h1, body.userforgot-password .forgotPasswordFormContainer > h1, body.userforgot-password .resetPasswordFormContainer > h1, body.userreset-password .signupFormContainer > h1, body.userreset-password .signinFormContainer > h1, body.userreset-password .forgotPasswordFormContainer > h1, body.userreset-password .resetPasswordFormContainer > h1 {
+  text-transform: capitalize;
+  color: #666;
+}
+body.usersign-in .signupFormContainer > h1, body.usersign-in .signupFormContainer > h1 + p, body.usersign-in .signinFormContainer > h1, body.usersign-in .signinFormContainer > h1 + p, body.usersign-in .forgotPasswordFormContainer > h1, body.usersign-in .forgotPasswordFormContainer > h1 + p, body.usersign-in .resetPasswordFormContainer > h1, body.usersign-in .resetPasswordFormContainer > h1 + p, body.userregister .signupFormContainer > h1, body.userregister .signupFormContainer > h1 + p, body.userregister .signinFormContainer > h1, body.userregister .signinFormContainer > h1 + p, body.userregister .forgotPasswordFormContainer > h1, body.userregister .forgotPasswordFormContainer > h1 + p, body.userregister .resetPasswordFormContainer > h1, body.userregister .resetPasswordFormContainer > h1 + p, body.userforgot-password .signupFormContainer > h1, body.userforgot-password .signupFormContainer > h1 + p, body.userforgot-password .signinFormContainer > h1, body.userforgot-password .signinFormContainer > h1 + p, body.userforgot-password .forgotPasswordFormContainer > h1, body.userforgot-password .forgotPasswordFormContainer > h1 + p, body.userforgot-password .resetPasswordFormContainer > h1, body.userforgot-password .resetPasswordFormContainer > h1 + p, body.userreset-password .signupFormContainer > h1, body.userreset-password .signupFormContainer > h1 + p, body.userreset-password .signinFormContainer > h1, body.userreset-password .signinFormContainer > h1 + p, body.userreset-password .forgotPasswordFormContainer > h1, body.userreset-password .forgotPasswordFormContainer > h1 + p, body.userreset-password .resetPasswordFormContainer > h1, body.userreset-password .resetPasswordFormContainer > h1 + p {
+  text-align: center;
+}
+body.usersign-in .signupFormContainer > h1 + p, body.usersign-in .signinFormContainer > h1 + p, body.usersign-in .forgotPasswordFormContainer > h1 + p, body.usersign-in .resetPasswordFormContainer > h1 + p, body.userregister .signupFormContainer > h1 + p, body.userregister .signinFormContainer > h1 + p, body.userregister .forgotPasswordFormContainer > h1 + p, body.userregister .resetPasswordFormContainer > h1 + p, body.userforgot-password .signupFormContainer > h1 + p, body.userforgot-password .signinFormContainer > h1 + p, body.userforgot-password .forgotPasswordFormContainer > h1 + p, body.userforgot-password .resetPasswordFormContainer > h1 + p, body.userreset-password .signupFormContainer > h1 + p, body.userreset-password .signinFormContainer > h1 + p, body.userreset-password .forgotPasswordFormContainer > h1 + p, body.userreset-password .resetPasswordFormContainer > h1 + p {
+  margin: 20px 0 40px;
+}
+body.usersign-in .signupFormContainer .signupFooterText, body.usersign-in .signinFormContainer .signupFooterText, body.usersign-in .forgotPasswordFormContainer .signupFooterText, body.usersign-in .resetPasswordFormContainer .signupFooterText, body.userregister .signupFormContainer .signupFooterText, body.userregister .signinFormContainer .signupFooterText, body.userregister .forgotPasswordFormContainer .signupFooterText, body.userregister .resetPasswordFormContainer .signupFooterText, body.userforgot-password .signupFormContainer .signupFooterText, body.userforgot-password .signinFormContainer .signupFooterText, body.userforgot-password .forgotPasswordFormContainer .signupFooterText, body.userforgot-password .resetPasswordFormContainer .signupFooterText, body.userreset-password .signupFormContainer .signupFooterText, body.userreset-password .signinFormContainer .signupFooterText, body.userreset-password .forgotPasswordFormContainer .signupFooterText, body.userreset-password .resetPasswordFormContainer .signupFooterText {
+  margin: 20px 40px;
+  color: #8D9AA6;
+  text-align: center;
+}
+body.usersign-in .signupFormContainer .signupFooterText a, body.usersign-in .signinFormContainer .signupFooterText a, body.usersign-in .forgotPasswordFormContainer .signupFooterText a, body.usersign-in .resetPasswordFormContainer .signupFooterText a, body.userregister .signupFormContainer .signupFooterText a, body.userregister .signinFormContainer .signupFooterText a, body.userregister .forgotPasswordFormContainer .signupFooterText a, body.userregister .resetPasswordFormContainer .signupFooterText a, body.userforgot-password .signupFormContainer .signupFooterText a, body.userforgot-password .signinFormContainer .signupFooterText a, body.userforgot-password .forgotPasswordFormContainer .signupFooterText a, body.userforgot-password .resetPasswordFormContainer .signupFooterText a, body.userreset-password .signupFormContainer .signupFooterText a, body.userreset-password .signinFormContainer .signupFooterText a, body.userreset-password .forgotPasswordFormContainer .signupFooterText a, body.userreset-password .resetPasswordFormContainer .signupFooterText a {
+  color: #666;
+}
+body.usersign-in .forgotPasswordFormContainer, body.userregister .forgotPasswordFormContainer, body.userforgot-password .forgotPasswordFormContainer, body.userreset-password .forgotPasswordFormContainer {
+  width: 100%;
+}
+body.usersign-in .forgotPasswordFormContainer > h1, body.userregister .forgotPasswordFormContainer > h1, body.userforgot-password .forgotPasswordFormContainer > h1, body.userreset-password .forgotPasswordFormContainer > h1 {
+  margin-bottom: 40px;
+}
+body.usersign-in .forgotPasswordFormContainer .form-actions, body.userregister .forgotPasswordFormContainer .form-actions, body.userforgot-password .forgotPasswordFormContainer .form-actions, body.userreset-password .forgotPasswordFormContainer .form-actions {
+  margin-top: 40px;
+}
+body.usersign-in #main, body.usersign-in #damain, body.userregister #main, body.userregister #damain, body.userforgot-password #main, body.userforgot-password #damain, body.userreset-password #main, body.userreset-password #damain {
+  margin: 0 auto;
+  background: white;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-top: 20px;
+}
+body.usersign-in > .row > div, body.userregister > .row > div, body.userforgot-password > .row > div, body.userreset-password > .row > div {
+  margin: 0 auto;
+  float: none;
+}
+
+body.dabody.interviews {
+  background: #F8FAFC;
+}
+body.dabody.interviews .removeInterviewIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+body.dabody.interviews .interviewsListPageContainer > h3 {
+  margin-bottom: 5px;
+  border: none;
+}
+body.dabody.interviews .interviewsListPageContainer > h3 + p {
+  display: none;
+}
+body.dabody.interviews .interviewsListPageContainer > h3 + p + p {
+  margin-bottom: 20px;
+}
+body.dabody.interviews .interviewsListPageContainer table {
+  border: 1px solid #ddd;
+}
+body.dabody.interviews .interviewsListPageContainer table td, body.dabody.interviews .interviewsListPageContainer table th {
+  border-bottom: 1px solid #ddd;
+  background: white;
+  padding: 20px;
+  vertical-align: middle;
+}
+body.dabody.interviews .interviewsListPageContainer table th {
+  color: #8D9AA6;
+  font-weight: normal;
+}
+body.dabody.interviews .interviewsListPageContainer table tbody tr td:nth-of-type(3) > a.label {
+  background: red;
+}
+body.dabody.interviews .interviewsListPageContainer table thead th:nth-of-type(3) {
+  color: white;
+}
+body.dabody.interviews .interviewsListPageContainer td:nth-of-type(1) {
+  color: #3EC891;
+  font-weight: bold;
+}
+body.dabody.interviews .interviewsListPageContainer td:nth-of-type(1), body.dabody.interviews .interviewsListPageContainer td:nth-of-type(1) a {
+  color: #3EC891;
+  font-weight: bold;
+}
+body.dabody.interviews .interviewsListPageContainer #delete_all {
+  background: #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+body.dabody.userprofile .container .row {
+  flex-direction: column;
+}
+body.dabody.userprofile ul.nav-pills.nav-stacked li:nth-of-type(1) a {
+  text-decoration: underline;
+  padding-left: 0;
+}
+body.dabody.userprofile ul.nav-pills.nav-stacked li:nth-of-type(2) {
+  display: none;
+}
+body.dabody.userprofile form label {
+  font-weight: normal;
+}
+body.dabody.userprofile form .form-group:nth-of-type(10), body.dabody.userprofile form .form-group:nth-of-type(11) {
+  display: none;
+}
+body.dabody.userprofile form .form-group:nth-of-type(3) a {
+  display: none;
+}
+body.dabody.userprofile .dropdown-menu .dropdown-item:last-of-type {
+  display: none;
+}
+body.dabody.userprofile .userProfileHeader {
+  border-bottom: 1px solid #ddd;
+}
+body.dabody.userprofile .userProfileHeader span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+body.dabody.userprofile .form-control {
+  max-width: 400px;
+}
+body.dabody.userprofile .container {
+  width: 100%;
+}
+body.dabody.userprofile .form-actions .btn {
+  background: #3EC891;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+}
+
+body.dabody.userchange-password .container {
+  width: 100%;
+}
+body.dabody.userchange-password .container .row {
+  flex-direction: column;
+}
+body.dabody.userchange-password .form-control {
+  max-width: 400px;
+}
+body.dabody.userchange-password .userChangePasswordHeader {
+  border-bottom: 1px solid #ddd;
+}
+body.dabody.userchange-password .userChangePasswordHeader span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  max-width: 1000px;
+  margin: 40px auto;
+  display: block;
+}
+body.dabody.userchange-password .form label {
+  font-weight: normal;
+}
+body.dabody.userchange-password .form-actions .btn {
+  background: #3EC891;
+  font-size: 16px;
+  border: none;
+  padding: 10px 40px;
+}
+
+body.dabody.userreset-password .resetPasswordFormContainer {
+  width: 100%;
+}
+
+blockquote.blockquote {
+  margin-top: 40px;
+}
+
+.a2j_documate_org .hslTopNavigationLink:nth-of-type(3), .docs_helpselflegal_com .hslTopNavigationLink:nth-of-type(3), .consumerlawyers_documate_org .hslTopNavigationLink:nth-of-type(3) {
+  display: none;
+}
+
+.documateErrorMessageContainer {
+  display: block !important;
+  margin: 1rem;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #555555;
+  max-height: 100%;
+}
+.documateErrorMessageContainer .moreDetails {
+  cursor: pointer;
+  margin: 0 0 2rem 1rem;
+  color: #767676;
+}
+.documateErrorMessageContainer .dontShow {
+  display: none;
+}
+
+/*# sourceMappingURL=docassemble_global.css.map */
+
+
+.signupFooterText {
+  display: none !important;
+}
+
+.forgotPasswordLinkContainer {
+  margin-top: 20px;
+}
+.signupFormContainer{
+  width: 100%;
+}
