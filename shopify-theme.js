@@ -2881,7 +2881,7 @@ var PickupAvailability = class extends HTMLElement {
 if (!window.customElements.get("pickup-availability")) {
   window.customElements.define("pickup-availability", PickupAvailability);
 }
-var currencyFormat = window.themeVariables.settings.currencyCodeEnabled ? window.themeVariables.settings.moneyWithCurrencyFormat : window.themeVariables.settings.moneyFormat;
+
 var SalePrice = class extends HTMLElement {
   constructor() {
     super();
@@ -2895,7 +2895,7 @@ var SalePrice = class extends HTMLElement {
   }
   _onVariantChanged(event) {
     const variant = event.detail.variant;
-    this.lastChild.replaceWith(document.createRange().createContextualFragment(formatMoney(variant["price"], currencyFormat)));
+    
     this.classList.toggle("text-on-sale", variant["compare_at_price"] > variant["price"]);
   }
 };
@@ -2912,7 +2912,7 @@ var CompareAtPrice = class extends HTMLElement {
   }
   _onVariantChanged(event) {
     const variant = event.detail.variant;
-    this.lastChild.replaceWith(document.createRange().createContextualFragment(formatMoney(variant["compare_at_price"], currencyFormat)));
+    
     this.hidden = !(variant["compare_at_price"] > variant["price"]);
   }
 };
