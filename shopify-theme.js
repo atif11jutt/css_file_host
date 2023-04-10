@@ -773,22 +773,9 @@ function getHeadingKeyframe(element, options = {}) {
     return [];
   }
   const splitLines = element.querySelector("split-lines")?.lines;
-  if (window.themeVariables.settings.headingApparition === "fade" || !splitLines) {
+  
     return [element, { opacity: [0, 1] }, { duration: 0.2, ...options }];
-  } else {
-    element.style.opacity = "1";
-    switch (window.themeVariables.settings.headingApparition) {
-      case "split_fade":
-        return [splitLines, { transform: ["translateY(0.5em)", "translateY(0)"], opacity: [0, 1] }, { duration: 0.3, delay: stagger2(0.1), ...options }];
-      case "split_clip":
-        return [splitLines, { clipPath: ["inset(0 0 100% 0)", "inset(0 0 -0.3em 0)"], transform: ["translateY(100%)", "translateY(0)"], opacity: [0, 1] }, { duration: 0.7, delay: stagger2(0.15), easing: [0.22, 1, 0.36, 1], ...options }];
-      case "split_rotation":
-        const rotatedSpans = splitLines.map((line) => line.querySelector("span"));
-        rotatedSpans.forEach((span) => span.style.transformOrigin = "top left");
-        splitLines.forEach((line) => line.style.clipPath = "inset(0 0 -0.3em 0)");
-        return [rotatedSpans, { transform: ["translateY(0.5em) rotateZ(5deg)", "translateY(0) rotateZ(0)"], opacity: [0, 1] }, { duration: 0.4, delay: stagger2(0.1), ...options }];
-    }
-  }
+
 }
 
 
