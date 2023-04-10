@@ -719,6 +719,41 @@ function getHeadingKeyframe(element, options = {}) {
 }
 
 
+// js/common/media/image.js
+function imageLoaded(imageOrArray) {
+  if (!imageOrArray) {
+    return Promise.resolve();
+  }
+  imageOrArray = imageOrArray instanceof Element ? [imageOrArray] : Array.from(imageOrArray);
+  return Promise.all(imageOrArray.map((image) => {
+    return new Promise((resolve) => {
+      if (image.tagName === "IMG" && image.complete || !image.offsetParent) {
+        resolve();
+      } else {
+        image.onload = () => resolve();
+      }
+    });
+  }));
+}
+function generateSrcset(imageObject, widths = []) {
+  const imageUrl = new URL(imageObject["src"]);
+  return widths.filter((width) => width <= imageObject["width"]).map((width) => {
+    imageUrl.searchParams.set("width", width.toString());
+    return `${imageUrl.href} ${width}w`;
+  }).join(", ");
+}
+function createMediaImg(media, widths = [], properties = {}) {
+  const image = new Image(media["preview_image"]["width"], media["preview_image"]["height"]), featuredMediaUrl = new URL(media["preview_image"]["src"]);
+  for (const propertyKey in properties) {
+    image.setAttribute(propertyKey, properties[propertyKey]);
+  }
+  image.alt = media["alt"];
+  image.src = featuredMediaUrl.href;
+  image.srcset = generateSrcset(media["preview_image"], widths);
+  return image;
+}
+
+
 
 export {
   CustomCursor,
@@ -730,5 +765,6 @@ export {
   getHeadingKeyframe,
   ScrollCarousel,
   ScrollProgress,
+  imageLoaded,
   ScrollShadow
 };
